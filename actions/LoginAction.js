@@ -53,3 +53,11 @@ export const LoginAction = async () => {
 
 
 };
+
+
+
+export const socialLoginAction = async (provider, callbackUrl="/") => {
+  await signIn(provider, {
+      callbackUrl: callbackUrl || "/",
+    });
+}
